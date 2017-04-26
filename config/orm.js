@@ -1,7 +1,8 @@
 // import Mysql connection
 var connection = require("../config/connection.js");
 
-// Object for all our SQL statement function
+// Object for all our SQL statement function CRUD PAGE CREATE READ UPDATE DELETE
+// `??` SANITIZING DATA "?""
 function objSql(ob){
 	var arr = [];
 

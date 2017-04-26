@@ -1,22 +1,20 @@
 var express = require("express");
-var bodyParser = require("body-parser");
 var router = express.Router();
 
-var methodOverride = require("method-override");
+// var bodyParser = require("body-parser");
+// var methodOverride = require("method-override");
 
 // Import the model (burger.js) to use its database funcitons
-
 var burger = require("../models/burger.js");
 
 // create all routes and setup up logic within those routes require
-
 router.get("/", function(req, res){
-	burger.selectAll(function(data) {
+	burger.all(function(data) {
 		var hbsObject = {
 			burger: data
 		};
 		console.log(hbsObject);
-		res.render("index", hbsObject);
+		res.render("index");
 	});
 });
 // insertOne sql 
@@ -40,5 +38,5 @@ router.put("/:id", function(req, res){
 		res.redirect("/");
 	});
 });
-
+// export routes for server.js to USE 
 module.exports = router;

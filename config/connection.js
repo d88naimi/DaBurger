@@ -12,9 +12,9 @@ var connection = mysql.createConnection({
 });
 
 // MAKE CONNECTION 
-connection.connect(function)(err) {
+connection.connect(function(err) {
   if (err) {
-    console.error("errror connection: " + err.stack);
+    console.error("error connection: " + err.stack);
     return;
   }
   console.log(" connection id to: " + connection.threadId);
@@ -22,4 +22,4 @@ connection.connect(function)(err) {
 
 // EXPORT CONNECTION FOR OUR ORM TO USE
 
-module.export = connection;
+module.exports = connection;
