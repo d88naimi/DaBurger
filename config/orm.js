@@ -47,11 +47,8 @@ updateOne: function(table, condition, callback) {
 			throw err;
 		}
 		callback(result);
-	});
-
-
+		});
 	}	
-
 };
 
 module.exports = orm; 
