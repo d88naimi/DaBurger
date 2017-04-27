@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<!-- loads jquery -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<!-- loads bootstrap -->
+		
+		<!-- Load in bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<!-- loads in bootstrp js -->
+		<!-- Loads jquery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Loads in bootstrp js -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="/assets/css/burgerStyles.css" type="text/css" />
+		<!--  linking to CSS --> 
+		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
 
 
-
-		<title>Eat the BURGER!</title>
+	<title>Eat the BURGER!</title>
+	
 	</head>
 
 	<body>
 	<div class="jumbotron" id="burgerName"> 
-				<h1 class="tracking-in-expand">Who's Hungry!</h1>
+			<h1 class="tracking-in-expand">Who's Hungry!</h1>
 		</div>
+		<div class="container-fluid row" id="content">
 		{{{ body }}}
+		</div>
 	</body>
 </html>

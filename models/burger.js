@@ -10,7 +10,7 @@ var burger = {
 
 	//variables cols and vals are arrays
 	create: function(vals, cb) {
-		orm.insertOne("burgers", "burgers_name", vals, function(res){
+		orm.insertOne("burgers", "burger_name", vals, function(res){
 			callback(res);
 		});
 	},

@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <h1>
+            Burgers!
+        </h1>
+        <h2>
+            Order a burger
+        </h2>
+        <div class="col-sm-4">
+            <ul>
+                {{#each burgers}}
+    {{#unless this.devoured}}
+                <li>
+                    {{this.burger_name}}
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <input name="devoured" type="hidden" value="true">
+                            <button type="submit">
+                                Make Burgers!
+                            </button>
+                        </input>
+                    </form>
+                </li>
+                {{/unless}}
+  {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-sm-4">
+            <ul>
+                <h2>
+                    BURGERS TO DEVOUR
+                </h2>
+                <ul>
+                    {{#each burgers}}
+    {{#if this.devoured}}
+                    <li>
+                        {{this.burger_name}}
+                        <form action="/{{this.id}}?_method=PUT" method="POST">
+                            <input name="devoured" type="hidden" value="false">
+                                <button type="submit">
+                                    DEVOURED!
+                                </button>
+                            </input>
+                        </form>
+                    </li>
+                    {{/if}}
+  {{/each}}
+                </ul>
+            </ul>
+        </div>
+        
+        <div class="col-sm-4">
+            <h2>
+                ADD A BURGER
+            </h2>
+            <form action="burgers/create" class="create-update-form" method="POST">
+                <div class="form-group">
+                    <label for="devor">
+                        DEVOURED?
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<input "radio"="" checked="" name="devoured" type="" value="true">
+    DEVOURED
+    <input "radio"="" checked="" name="devoured" type="" value="false">
+        Not so much DEVOURED
+    </input>
+</input>
+<button class="btn btn-primary" type="submit">
+    ADD BURGER POR FAVOR
+</button>
+
+
+
+
+
+

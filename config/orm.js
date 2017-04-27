@@ -3,14 +3,14 @@ var connection = require("../config/connection.js");
 
 // Object for all our SQL statement function CRUD PAGE CREATE READ UPDATE DELETE
 // `??` SANITIZING DATA "?""
-function objSql(ob){
-	var arr = [];
+// function objSql(ob){
+// 	var arr = [];
 
-	for (var key in ob) {
-		arr.push(key + "=" + ob[key]);
-	}
-	return arr.toString();
-}
+// 	for (var key in ob) {
+// 		arr.push(key + "=" + ob[key]);
+// 	}
+// 	return arr.toString();
+// }
 
 //selectall sql 
 var orm = {
