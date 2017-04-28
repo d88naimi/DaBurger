@@ -9,7 +9,7 @@ var burger = {
 	},
 
 	//variables cols and vals are arrays
-	create: function(cols, vals, cb) {
+	create: function( vals, callback) {
 		orm.insertOne("burgers", "burger_name", vals, function(res){
 			callback(res);
 		});
