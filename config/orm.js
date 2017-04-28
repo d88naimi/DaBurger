@@ -3,16 +3,16 @@ var connection = require("../config/connection.js");
 
 // Object for all our SQL statement function CRUD PAGE CREATE READ UPDATE DELETE
 // `??` SANITIZING DATA "?""
-// function objSql(ob){
-// 	var arr = [];
+function objToSql(ob){
+	var arr = [];
 
-// 	for (var key in ob) {
-// 		arr.push(key + "=" + ob[key]);
-// 	}
-// 	return arr.toString();
-// }
+	for (var key in ob) {
+		arr.push(key + "=" + ob[key]);
+	}
+	return arr.toString();
+}
 
-//selectall sql 
+// selectall sql 
 
 
 var orm = {
@@ -41,10 +41,11 @@ insertOne: function(table, cols, vals, callback) {
     });
   },
 // update sql
-updateOne: function(table, condition, callback) {
-	var queryString = "UPDATE " + table + "SET devoured = true WHERE" + condition;
+updateOne: function(table, objColVals, condition, callback) {
+	var queryString = "UPDATE " + table + "SET devoured = true WHERE" + objToSql(objColVals) + condition;
 
 	console.log(queryString);
+	
 	connection.query(queryString, function(err,result){
 		if(err) {
 			throw err;
