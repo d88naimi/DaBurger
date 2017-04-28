@@ -6,7 +6,7 @@
         <h2>
             Order a burger
         </h2>
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-lg-4">
             <ul>
                 {{#each burgers}}
     {{#unless this.devoured}}
@@ -25,7 +25,7 @@
             </ul>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-lg-4">
             <ul>
                 <h2>
                     BURGERS TO DEVOUR
@@ -49,11 +49,11 @@
             </ul>
         </div>
         
-        <div class="col-sm-4">
+       <div class="col-sm-4 col-lg-4">
             <h2>
                 ADD A BURGER
             </h2>
-            <form action="burgers/create" class="create-update-form" method="POST">
+            <form action="/" class="create-update-form" method="POST">
                 <div class="form-group">
                     <label for="devor">
                         DEVOURED?
@@ -63,15 +63,19 @@
         </div>
     </div>
 </div>
-<input "radio"="" checked="" name="devoured" type="" value="true">
-    DEVOURED
-    <input "radio"="" checked="" name="devoured" type="" value="false">
-        Not so much DEVOURED
-    </input>
-</input>
-<button class="btn btn-primary" type="submit">
-    ADD BURGER POR FAVOR
-</button>
+
+
+<h1> Add Burger!!</h1>
+<form action="/" method="POST">
+
+        <label for="burgerBox">Burger Name:</label>
+        <input type="text" id="burgerBox" name="name" >
+
+      <button class="btn btn-danger" type="submit">Add Burger Por Favor</button>
+
+    </form>
+</div>
+
 
 
 

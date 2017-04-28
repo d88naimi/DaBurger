@@ -15,8 +15,8 @@ var burger = {
 		});
 	},
 	// udpdates burgers to display i think ?????
-	update: function(objColVals, condition, callback) {
-		orm.updateOne("burgers", objColVals, condition, function(res){
+	update: function( condition, callback) {
+		orm.updateOne("burgers", condition, function(res){
 			callback(res);
 		})
 	}

@@ -13,6 +13,8 @@ var connection = require("../config/connection.js");
 // }
 
 //selectall sql 
+
+
 var orm = {
 	selectAll: function(tableName, callback) {
 		var queryString = "SELECT * FROM " +  tableName + ";";
@@ -24,19 +26,20 @@ var orm = {
 		});
 	},
 // create sql 
-insertOne: function(table, burgerName, devoured, callback) {
-	var queryString = "INSERT INTO " + table + ' (burger_name, devoured) ';
-	queryString += 'VALUES ("' + burgerName + '", ' + devoured + ');';
+insertOne: function(table, cols, vals, callback) {
+
+    var queryString = "INSERT INTO " + table +" ("+cols.toString()+") VALUES (?)";
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result){
-    	if (err) {
-    		throw err;
-    	}
-    	callback(result);
-    	});
-	},
+    connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      callback(result);
+    });
+  },
 // update sql
 updateOne: function(table, condition, callback) {
 	var queryString = "UPDATE " + table + "SET devoured = true WHERE" + condition;

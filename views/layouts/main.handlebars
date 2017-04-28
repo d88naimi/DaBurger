@@ -4,14 +4,15 @@
         <meta charset="utf-8">
             <!-- Load in bootstrap -->
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-                <!-- Loads jquery -->
-                <script src="https://code.jquery.com/jquery.js">
-                </script>
+                
+                
                 <!-- Loads in bootstrp js -->
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
                 </script>
                 <!--  linking to CSS -->
                 <link href="/assets/css/burger_style.css" rel="stylesheet" type="text/css"/>
+                <!--  linking to GoogleFont -->
+                <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
                 <title>
                     Eat the BURGER!
                 </title>
@@ -20,7 +21,7 @@
     </head>
     <body>
         <div class="jumbotron" id="burgerName">
-            <h1 class="tracking-in-expand">
+            <h1 class="tracking-in-expand text-center">
                 Who's Hungry!
             </h1>
             <img id="burgerPic" src="assets/img/burger.jpg">
@@ -29,5 +30,8 @@
         <div class="container-fluid row" id="content">
             {{{ body }}}
         </div>
+        <!-- Loads jquery -->
+        <script src="https://code.jquery.com/jquery.js">
+                </script>
     </body>
 </html>
